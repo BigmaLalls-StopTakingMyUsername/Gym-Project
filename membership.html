@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Project - Membership</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/favicon.ico" alt="Fitness Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">About Us</a>
+            <a href="membership.html" class="active">Membership</a>
+            <a href="bmi.html">BMI Calculator</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <div class="registration-card">
+            <h2>Registration</h2>
+            
+            <div id="error-messages"></div>
+
+            <form id="registrationForm">
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="John" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Doe" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" placeholder="111-111-1111" required>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="18" min="14" max="100" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="goals">Fitness Goals</label>
+                    <textarea id="goals" rows="3" placeholder="Tell us what you want to achieve..." required></textarea>
+                </div>
+
+                <div class="form-options-grid">
+                    <div class="option-block">
+                        <label>Membership</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="membership" value="Basic" required>Budget</label>
+                            <label><input type="radio" name="membership" value="Silver">Standard</label>
+                            <label><input type="radio" name="membership" value="Gold">Premium</label>
+                        </div>
+                    </div>
+
+                    <div class="option-block">
+                        <label>Payment Option</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="payment" value="Card" required> Card</label>
+                            <label><input type="radio" name="payment" value="In-Person"> In-Person</label>
+                        </div>
+                    </div>
+
+                    <div class="option-block form-actions-grid-block">
+                        <label>Actions</label>
+                        <div class="grid-buttons-wrapper">
+                            <button type="submit" class="btn-submit">Submit</button>
+                            <button type="button" id="clearBtn" class="btn-clear">Clear Form</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h5>Hours</h5>
+                <p>Mon - Fri: 5:00 AM - 11:00 PM</p>
+                <p>Sat - Sun: 7:00 AM - 9:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h5>Location</h5>
+                <p>223 Edmond Street</p>
+                <p>New York, NY 10001</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5025.954494406225!2d-73.99008112261026!3d40.69542717139594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a4a6c47643b%3A0x284552dca0b97d69!2sNew%20York%20City%20College%20of%20Technology!5e1!3m2!1sen!2sus!4v1779485417472!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="footer-section">
+                <h5>Contact</h5>
+                <p>Email: info@edmondsgym.com</p>
+                <p>Phone: (726) 857-5309</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Edmond's Gym. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/registration.js"></script>
+</body>
+</html>
